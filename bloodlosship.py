@@ -34,7 +34,7 @@ if q3 == "ไม่เป็น" :
 else :
     c = int(1)
     
-q4 = st.radio("การผ่าตัดนี้ใส่ cementหรือไม่" , ["ไม่ใส่" , "ใส"],  horizontal = True)
+q4 = st.radio("การผ่าตัดนี้ใส่ cementหรือไม่" , ["ไม่ใส่" , "ใส่"],  horizontal = True)
 if q4 == "ไม่ใส่" :
     d = int(0)
 else :
