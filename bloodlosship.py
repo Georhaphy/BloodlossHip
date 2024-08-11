@@ -12,15 +12,6 @@ filename = "modelbloodloss.pickle"
 loaded_model = pickle.load(open(filename, "rb"))
 
 
-css="""
-<style>
-     [data-testid="stApp"]
-     {
-        background: #F0FFFF;
-    }
-</style>
-"""
-st.write(css, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: black ; font-size: 25px ;'>Blood loss Assessment by Samutsakhon Tool (BLAST)</h1>", unsafe_allow_html=True)
 
 
