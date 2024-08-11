@@ -13,7 +13,7 @@ loaded_model = pickle.load(open(filename, "rb"))
 
 css="""
 <style>
-     [data-testid="stApp"]
+     [data-testid="stAppViewContainer"]
      {
         background: #F0FFFF;
     }
