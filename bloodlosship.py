@@ -15,25 +15,25 @@ loaded_model = pickle.load(open(filename, "rb"))
 st.markdown("<h1 style='text-align: center; color: black ; font-size: 25px ;'>Blood Loss Assessment by Samutsakhon Tool (BLAST)</h1>", unsafe_allow_html=True)
 
 
-q1 = st.radio("เพศ", ["ชาย" , "หญิง"],  horizontal = True)
+q1 = st.radio("**เพศ**", ["ชาย" , "หญิง"],  horizontal = True)
 if q1 == "ชาย" :
     a = int(1)
 else :
     a = int(0)
     
-q2 = st.radio("ผู้ป่วยเป็นโรคไตหรือไม่" , ["ไม่เป็น" , "เป็น"],  horizontal = True)
+q2 = st.radio("**ผู้ป่วยเป็นโรคไตหรือไม่**" , ["ไม่เป็น" , "เป็น"],  horizontal = True)
 if q2 == "ไม่เป็น" :
     b = int(0)
 else :
     b = int(1)
     
-q3 = st.radio("ผู้ป่วยเป็นโรคหัวใจขาดเลือดหรือไม่" , ["ไม่เป็น" , "เป็น"],  horizontal = True)
+q3 = st.radio("**ผู้ป่วยเป็นโรคหัวใจขาดเลือดหรือไม่**" , ["ไม่เป็น" , "เป็น"],  horizontal = True)
 if q3 == "ไม่เป็น" :
     c = int(0)
 else :
     c = int(1)
     
-q4 = st.radio("การผ่าตัดนี้ใส่ cementหรือไม่" , ["ไม่ใส่" , "ใส่"],  horizontal = True)
+q4 = st.radio("**การผ่าตัดนี้ใส่ cementหรือไม่**" , ["ไม่ใส่" , "ใส่"],  horizontal = True)
 if q4 == "ไม่ใส่" :
     d = int(0)
 else :
@@ -55,7 +55,7 @@ st.markdown(
 )
     
 
-q5 = st.radio("ผู้ป่วยเป็น ASA Classใด" , ["I" , "II", "III", "IV", "V"],  horizontal = True)
+q5 = st.radio("**ผู้ป่วยเป็น ASA Classใด**" , ["I" , "II", "III", "IV", "V"],  horizontal = True)
 if q5 == "I" :
     e = int(1)
 elif q5 == "II" :
@@ -69,7 +69,7 @@ else :
     
 
     
-if st.button('ประเมินความเสี่ยง'):
+if st.button('**ประเมินความเสี่ยง**'):
     s=[a,b,c,d,e]
     array = loaded_model.predict([s])
     k=loaded_model.predict_proba([s]).round(2)
