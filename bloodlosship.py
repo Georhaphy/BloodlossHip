@@ -10,23 +10,24 @@ import pickle
 import base64
 
 
-def add_bg_from_local():
+def add_local_backgound_image_(image):
+    with open(image, "rb") as image:
+        encoded_string = base64.b64encode(image.read())
+        
     st.markdown(
         f"""
         <style>
         .stApp {{
-            background-image: url("./files/smsk.jpg");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+            background-image: url(data:files/
+            {"jpg"};base64,{encoded_string.decode()});
+            background-size: cover
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+            )
 
-add_bg_from_local()
-
-
-
+add_local_backgound_image_('files/smsk.jpg')
 
 
 
