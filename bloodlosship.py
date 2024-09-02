@@ -7,27 +7,10 @@ Created on Tue Jun 18 07:50:38 2024
 
 import streamlit as st 
 import pickle
-import base64
 
 
-def add_local_backgound_image_(image):
-    with open(image, "rb") as image:
-        encoded_string = base64.b64encode(image.read())
-        
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url(data:files/
-            {"jpg"};base64,{encoded_string.decode()});
-            background-size: cover
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-            )
 
-add_local_backgound_image_('files/smsk.jpg')
+
 
 
 
